@@ -40,6 +40,12 @@ docker build -t portfolio-api .
 docker run -p 8000:8000 portfolio-api
 ```
 
+Multi-stage runtime image is ~258MB vs ~1.7GB for a naive single-stage build (~85% smaller). Runs as non-root `appuser`.
+
+## Security
+
+`Trivy scan` in CI fails on fixable HIGH/CRITICAL findings (`ignore-unfixed`). Base-image OS packages with no upstream fix yet are non-blocking and tracked for resolution.
+
 ## CI
 
 On push/PR: lint → test → build → Trivy scan (fails HIGH/CRITICAL).
