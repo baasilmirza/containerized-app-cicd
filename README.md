@@ -57,5 +57,3 @@ On `v*` tag: pushes semver-tagged image to GHCR.
 git tag v0.1.0
 git push origin v0.1.0
 ```
-
-See `INSTRUCTIONS.md` for the full step-by-step guide.
