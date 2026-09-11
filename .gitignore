@@ -5,3 +5,8 @@ __pycache__/
 .venv/
 venv/
 .env
+
+# Personal / not published
+SPEC.md
+INSTRUCTIONS.md
+docs/*blog*.md
